@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: ZuulServer
+    
+server:  port: 8080
+  
+zuul:  routes:    CustomerMS:
+      path: /customer/**
+      strip-prefix: false
+    IdentityMS:
+      path: /identity/**
+      strip-prefix: false
+    SimcardMS:
+      path: /sim/**
+      strip-prefix: false
+      
+      
+      
+eureka:  client:    serviceUrl:
+      defaultZone: http://localhost:8888/eureka      

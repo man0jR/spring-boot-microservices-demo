@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: SimcardMS
+    
+server:  port: 8002
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8888/eureka}

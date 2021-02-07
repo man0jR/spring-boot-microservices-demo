@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: IdentityMS
+    
+server:  port: 8001
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8888/eureka}
